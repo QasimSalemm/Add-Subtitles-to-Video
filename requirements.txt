@@ -1,8 +1,6 @@
-libgl1
-libglib2.0-0
 PySide6
 streamlit
 proglog
 numpy
-Pillow
+Pillow 
 moviepy
