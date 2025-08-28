@@ -60,17 +60,17 @@ if video_file:
     # -----------------------------
     # Add Overlay
     # -----------------------------
-    st.subheader("➕ Add Text Overlay")
+    st.subheader("Add Text Overlay")
     user_text = st.text_area("Enter text")
 
     # custom font
-    st.subheader("🎨 Upload Custom Font (TTF)")
+    st.subheader("Upload Custom Font (TTF)")
     uploaded_font_file = st.file_uploader(
         "Upload a .ttf font file (optional)",
         type=["ttf"],
         key="font_upload"
     )
-    font_path = None
+    font_path =None# os.path.join(os.path.dirname(__file__), "fonts", "arial.ttf")
     # Save font to temp file
     if uploaded_font_file is not None:
         tmp_font = tempfile.NamedTemporaryFile(delete=False, suffix=".ttf")
@@ -78,8 +78,9 @@ if video_file:
         tmp_font.close()
         font_path = tmp_font.name
 
+
     # --- Start Time ---
-    st.markdown("### ⏱ Set Overlay Timing")
+    st.subheader("Set Overlay Timing")
     sh, sm, ss = st.columns(3)
     with sh:
         start_h = st.number_input("Start Hour", min_value=0, max_value=int(clip.duration // 3600), value=0)
@@ -101,7 +102,10 @@ if video_file:
 
     end_time = uf.hms_to_seconds(end_h, end_m, end_s)
     # font size and text color
-    font_size = st.slider("Font Size", 5, 200, 22)
+    font_size =st.number_input("Font Size", min_value=5, max_value=200, value=22)
+    #font_size = st.slider("Font Size", 5, 200, 22)
+
+    st.subheader("Set Text & Background Color")
     text_color_hex = st.color_picker("Pick Text Color", "#FFFFFF")
     # Add background color 
     enable_bg = st.checkbox("Enable background box")
@@ -112,10 +116,10 @@ if video_file:
         bg_color = tuple(int(bg_color_hex.lstrip("#")[i:i+2], 16) for i in (0, 2, 4))
         # Add opacity slider
         bg_opacity = st.slider("Background Opacity", 0.0, 1.0, 0.5, 0.05)  # 0 = fully transparent, 1 = opaque
-    # Add padding slider
+
+    # Set Positioning
+    st.header("Set Position")
     bottom_padding = st.slider("Set bottom padding for background", 0, 500, 15)
-    # Add Positioning
-    st.markdown("**Position**")
     pos_choice = st.selectbox(
         "Overlay position",
         ["Bottom center", "Top center", "Center", "Top-left", "Top-right", "Bottom-left", "Bottom-right", "Custom (percent)"],
