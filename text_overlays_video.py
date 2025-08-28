@@ -302,7 +302,6 @@ if video_file:
                     bg_opacity=overlay.get("bg_opacity", 0.5),  # use opacity from overlay
                     padding=overlay["bottom_padding"]
                 )
-                from PIL import Image
                 np_img = np.array(Image.open(pil_img))
                 os.remove(pil_img)
 
