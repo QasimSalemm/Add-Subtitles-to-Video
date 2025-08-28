@@ -1,7 +1,6 @@
+PySide6
 streamlit
-pillow
-numpy
-arabic-reshaper
-python-bidi
-moviepy
 proglog
+numpy
+Pillow
+moviepy
