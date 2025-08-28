@@ -1,6 +1,8 @@
+import os
 from PySide6.QtGui import QFont, QFontDatabase, QImage, QPainter, QColor,QPainterPath
 from PySide6.QtCore import Qt, QRectF
 import tempfile
+os.environ["QT_QPA_PLATFORM"] = "offscreen"
 
 def create_image_qt_text_bg(
     text,
