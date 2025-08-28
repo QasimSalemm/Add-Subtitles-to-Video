@@ -70,7 +70,7 @@ if video_file:
         type=["ttf"],
         key="font_upload"
     )
-    font_path =None# os.path.join(os.path.dirname(__file__), "fonts", "arial.ttf")
+    font_path = os.path.join(os.path.dirname(__file__), "fonts", "arial.ttf")
     # Save font to temp file
     if uploaded_font_file is not None:
         tmp_font = tempfile.NamedTemporaryFile(delete=False, suffix=".ttf")
