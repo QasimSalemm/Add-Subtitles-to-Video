@@ -1,2 +1,10 @@
 [server]
 maxUploadSize = 1024
+[theme]
+font = "Times New Roman"
+headingFont = "Times New Roman"
+codeFont = "monospace"
+[theme.sidebar]
+font = "Times New Roman"
+headingFont = "Times New Roman"
+codeFont = "monospace"
