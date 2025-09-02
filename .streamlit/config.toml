@@ -1,5 +1,6 @@
 [server]
 maxUploadSize = 1024
+enableStaticServing = true
 [theme]
 font = "Times New Roman"
 headingFont = "Times New Roman"
@@ -8,3 +9,5 @@ codeFont = "monospace"
 font = "Times New Roman"
 headingFont = "Times New Roman"
 codeFont = "monospace"
+[server]
+enableStaticServing = true
