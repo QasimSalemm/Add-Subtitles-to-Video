@@ -9,5 +9,3 @@ codeFont = "monospace"
 font = "Times New Roman"
 headingFont = "Times New Roman"
 codeFont = "monospace"
-[server]
-enableStaticServing = true
