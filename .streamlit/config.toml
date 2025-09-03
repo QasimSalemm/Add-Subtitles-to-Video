@@ -1,6 +1,6 @@
 [server]
-maxUploadSize = 1024
 enableStaticServing = true
+maxUploadSize = 1024
 [theme]
 font = "Times New Roman"
 headingFont = "Times New Roman"
