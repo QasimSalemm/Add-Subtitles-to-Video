@@ -53,7 +53,7 @@ st.markdown(
 
     <div class="section-card">
         <h3>7. Contact</h3>
-        <p>For questions about these Terms, please reach out via our <a href='/Contact_Us'>Contact Us</a> page.</p>
+        <p>For questions about these Terms, please reach out via our <a href='/Contact'>Contact Us</a> page.</p>
     </div>
 
     <div class="section-card">
