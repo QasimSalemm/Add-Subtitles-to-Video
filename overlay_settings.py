@@ -375,7 +375,8 @@ def footer():
             bottom: 0;
             width: 100%;
             text-align: center;
-            font-size: 14px;           
+            font-size: 14px;
+            
             padding: 5px 0;
             background-color: rgba(255, 255, 255, 50);
         }
@@ -383,6 +384,7 @@ def footer():
         <div class="footer">
             <hr style="margin:2px 0;">
             © 2025 Add Text to Video Tool
+        </div>
         """,
         unsafe_allow_html=True
     )
