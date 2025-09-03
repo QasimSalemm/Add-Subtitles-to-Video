@@ -19,11 +19,11 @@ st.set_page_config(
 )
 st.navigation([
     st.Page("Home.py", title="Home"),
-    st.Page("pages/About_Us.py", title="About Us"),
-    st.Page("pages/Contact_Us.py", title="Contact Us"),
-    st.Page("pages/Privacy_Policy.py", title="Privacy Policy"),
-    st.Page("pages/Terms_Conditions.py", title="Terms Conditions"),
-    st.Page("pages/How_To_Use.py", title="How To Use")
+    st.Page("pages/1_About_Us.py", title="About Us"),
+    st.Page("pages/2_Contact_Us.py", title="Contact Us"),
+    st.Page("pages/3_Privacy_Policy.py", title="Privacy Policy"),
+    st.Page("pages/4_Terms_Conditions.py", title="Terms Conditions"),
+    st.Page("pages/5_How_To_Use.py", title="How To Use")
 ])
 st.markdown(
     """
