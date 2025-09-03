@@ -7,13 +7,13 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://videotexteditor.streamlit.app/About_Us</loc>
+    <loc>https://videotexteditor.streamlit.app/About</loc>
     <lastmod>2025-09-03T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://videotexteditor.streamlit.app/Contact_Us</loc>
+    <loc>https://videotexteditor.streamlit.app/Contact</loc>
     <lastmod>2025-09-03T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
