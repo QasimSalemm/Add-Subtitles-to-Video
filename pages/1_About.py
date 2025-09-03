@@ -48,12 +48,7 @@ st.markdown(
         <p>If you`d like to share feedback, report an issue, or suggest a new feature:</p>
         <ul> 
             <li><b>Email:</b> 
-                    <a href="mailto:qasimsaleem317@gmail.com
-    ?subject=Support%20Request%20-%20Video%20Overlay%20Tool
-    &amp;body=Hello%2C%0A%0AI%20would%20like%20to%20ask%20about...">
-      Email us
-    </a>
-                (or <a href="https://mail.google.com/mail/?view=cm&fs=1&to=qasimsaleem317@gmail.com&su=Support%20Request%20-%20Video%20Overlay%20Tool&body=Hello,%0D%0A%0D%0AI would like to ask about..." target="_blank">open in Gmail</a>)
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=qasimsaleem317@gmail.com&su=Support%20Request%20-%20Video%20Overlay%20Tool&body=Hello,%0D%0A%0D%0AI would like to ask about..." target="_blank">open in Gmail</a>
             </li>
             <li><b>GitHub:</b> <a href="https://github.com/QasimSalemm/" target="_blank">Qasim Saleem</a></li>
             <li><b>Repository:</b> <a href="https://github.com/QasimSalemm/Add-Subtitles-to-Video" target="_blank">Add Text to Video Tool Repo</a></li>
