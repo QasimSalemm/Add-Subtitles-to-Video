@@ -1,0 +1,28 @@
+* [33m0363037[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Update README.md
+* [33md3d4185[m Create README.md
+* [33m0b75fd3[m update some display
+* [33m7e798ec[m update some display
+*   [33mf61c4da[m Resolve merge conflict: remove feedback.csv
+[32m|[m[33m\[m  
+[32m|[m * [33md948b5a[m Update feedback.csv
+* [33m|[m [33ma566012[m update some display
+[33m|[m[33m/[m  
+* [33m4145706[m update some display
+* [33m1ad8c4d[m update some display
+* [33mc0241b3[m update some display
+* [33md7344db[m update some display
+* [33m7c31db0[m update some display
+* [33m1078d7d[m update some display
+* [33m48cc933[m update some display
+* [33mc2bcefd[m update some display
+* [33m82d1fe8[m update some display
+* [33m1e39e5f[m update some display
+* [33md7b2a13[m Remove some code
+* [33m0e563b7[m Fix PySide6 Qt dependencies and force offscreen rendering
+* [33m2cde93e[m Add libxkbcommon0 to fix PySide6 import error
+* [33m67df2ad[m Added libegl1 to fix PySide6 EGL error
+* [33m93aeea5[m Fix: split Python and system dependencies
+* [33m895501a[m Updated requirements with PySide6 and system dependencies
+* [33m697e417[m Updated app with new changes
+* [33me60de0d[m first commit
+* [33m922f121[m first commit
