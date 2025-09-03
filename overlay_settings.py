@@ -382,7 +382,7 @@ def footer():
         </style>
         <div class="footer">
             <hr style="margin:2px 0;">
-            © 2025 Video Overlay Tool
+            © 2025 Add Text to Video Tool
         """,
         unsafe_allow_html=True
     )
