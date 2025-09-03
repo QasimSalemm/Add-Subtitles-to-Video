@@ -376,20 +376,13 @@ def footer():
             width: 100%;
             text-align: center;
             font-size: 14px;
-            
             padding: 5px 0;
-            background-color: rgba(255, 255, 255, 50);
+            background-color: rgba(255, 255, 255, 0.5);
         }
         </style>
         <div class="footer">
             <hr style="margin:2px 0;">
-            © 2025 Video Overlay Tool | 
-            <a href="/About_Us" target="_self">About Us</a>
-            <a href="/Contact_Us" target="_self">Contact Us</a>
-            <a href="/Privacy_Policy" target="_self">Privacy Policy</a>
-            <a href="/Terms_Conditions" target="_self">Terms & Conditions</a>
-            <a href="/How_To_Use" target="_self">How To Use</a>
-
+            © 2025 Video Overlay Tool
         </div>
         """,
         unsafe_allow_html=True
@@ -402,46 +395,3 @@ def local_css(file_name: str):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-
-
-import streamlit as st
-
-def serve_seo_files():
-    path = st.get_option("server.headless")  # we can’t directly read path, so use query hack
-    query_params = st.query_params
-
-    # Fallback for path-based SEO
-    if "sitemap" in query_params or "sitemap.xml" in query_params:
-        st.markdown(
-            """<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://videotexteditor.streamlit.app/</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://videotexteditor.streamlit.app/about</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://videotexteditor.streamlit.app/contact</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://videotexteditor.streamlit.app/privacy</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://videotexteditor.streamlit.app/terms</loc>
-    <priority>0.6</priority>
-  </url>
-</urlset>""",
-            unsafe_allow_html=True
-        )
-        st.stop()
-
-    if "robots" in query_params or "robots.txt" in query_params:
-        st.text(
-            "User-agent: *\nAllow: /\n\nSitemap: https://videotexteditor.streamlit.app/?sitemap.xml"
-        )
-        st.stop()
