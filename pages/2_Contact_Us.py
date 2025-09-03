@@ -11,7 +11,6 @@ st.set_page_config(
     page_icon="images/theme.png"
 )
 
-# ✅ Intro
 st.markdown(
     """
     <div class="section-card">

@@ -3,16 +3,16 @@ import overlay_settings as settings_overlay
 
 # ✅ Apply global styles
 settings_overlay.apply_styles()
+
 # ==============================
 # seo configuration
 # ==============================
-settings_overlay.apply_styles()
+
 st.set_page_config(
     page_title="About Us - Add Text to Video Tool & Team",
     page_icon="images/theme.png"
 )
 
-# ✅ Page content
 st.markdown(
     """
     <div class="section-card">

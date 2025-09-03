@@ -8,11 +8,12 @@ from PySide6.QtWidgets import QApplication
 if not QApplication.instance():
     app = QApplication(sys.argv)
 
+# ✅ Apply global styles
+settings_overlay.apply_styles()
 
 # ==============================
 # seo configuration
 # ==============================
-settings_overlay.apply_styles()
 st.set_page_config(
     page_title="Add Text to Video Manually or Upload CSV/Subtitles File",
     page_icon="images/theme.png"

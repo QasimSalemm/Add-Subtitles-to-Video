@@ -2,7 +2,7 @@ import streamlit as st
 import overlay_settings as settings_overlay
 
 
-
+# ✅ Apply global styles
 settings_overlay.apply_styles()
 
 st.set_page_config(

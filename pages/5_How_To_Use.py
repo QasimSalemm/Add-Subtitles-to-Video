@@ -1,10 +1,9 @@
 import streamlit as st
 import overlay_settings as settings_overlay
 
-# Apply global styles
+# ✅ Apply global styles
 settings_overlay.apply_styles()
 
-# Page config
 st.set_page_config(
     page_title="How to Use - Add Text to Video Tool",
     page_icon="images/theme.png"
