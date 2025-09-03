@@ -384,11 +384,11 @@ def footer():
         <div class="footer">
             <hr style="margin:2px 0;">
             © 2025 Video Overlay Tool | 
-            <a href="/About_Us" target="_self">About Us</a>
-            <a href="/Contact_Us" target="_self">Contact Us</a>
-            <a href="/Privacy_Policy" target="_self">Privacy Policy</a>
-            <a href="/Terms_Conditions" target="_self">Terms & Conditions</a>
-            <a href="/How_To_Use" target="_self">How To Use</a>
+            <a href="/1_About_Us" target="_self">About Us</a>
+            <a href="/2_Contact_Us" target="_self">Contact Us</a>
+            <a href="/3_Privacy_Policy" target="_self">Privacy Policy</a>
+            <a href="/4_Terms_Conditions" target="_self">Terms & Conditions</a>
+            <a href="/5_How_To_Use" target="_self">How To Use</a>
 
         </div>
         """,
