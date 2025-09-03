@@ -17,7 +17,6 @@ st.set_page_config(
     page_title="Add Text to Video Manually or Upload CSV/Subtitles File",
     page_icon="images/theme.png"
 )
-
 st.markdown(
     """
     <div class="section-card">
