@@ -7,7 +7,7 @@ import os
 # ✅ Apply global styles
 settings_overlay.apply_styles()
 st.set_page_config(
-    page_title="Contact Us - Add Text to Video Tool",
+    page_title="Contact - Add Text to Video Tool",
     page_icon="images/theme.png"
 )
 
