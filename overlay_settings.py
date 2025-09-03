@@ -375,22 +375,14 @@ def footer():
             bottom: 0;
             width: 100%;
             text-align: center;
-            font-size: 14px;
-            
+            font-size: 14px;           
             padding: 5px 0;
             background-color: rgba(255, 255, 255, 50);
         }
         </style>
         <div class="footer">
             <hr style="margin:2px 0;">
-            © 2025 Video Overlay Tool | 
-            <a href="/About_Us" target="_self">About Us</a>
-            <a href="/Contact_Us" target="_self">Contact Us</a>
-            <a href="/Privacy_Policy" target="_self">Privacy Policy</a>
-            <a href="/Terms_Conditions" target="_self">Terms & Conditions</a>
-            <a href="/How_To_Use" target="_self">How To Use</a>
-
-        </div>
+            © 2025 Video Overlay Tool
         """,
         unsafe_allow_html=True
     )
