@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://videotexteditor.streamlit.app/?sitemap
+Sitemap: https://videotexteditor.streamlit.app/static/sitemap.xml
