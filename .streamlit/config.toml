@@ -1,6 +1,5 @@
 [server]
 enableStaticServing = true
-STREAMLIT_SERVER_ENABLE_STATIC_SERVING=true
 maxUploadSize = 1024
 [theme]
 font = "Times New Roman"
