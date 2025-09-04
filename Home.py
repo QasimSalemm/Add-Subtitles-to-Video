@@ -10,8 +10,40 @@ if not QApplication.instance():
 
 # ✅ Apply global styles
 settings_overlay.apply_styles()
+# ✅ Works on new Streamlit
+params = st.query_params
 
-settings_overlay.site_robot()
+# Robots.txt
+if "robots" in params:
+    st.write(
+        "User-agent: *\n"
+        "Allow: /\n"
+        "Sitemap: https://videotexteditor.streamlit.app/?sitemap"
+    )
+    st.stop()
+
+# Sitemap.xml
+if "sitemap" in params:
+    st.write(
+        """<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://videotexteditor.streamlit.app/</loc>
+    <lastmod>2025-09-03T00:00:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://videotexteditor.streamlit.app/About</loc>
+    <lastmod>2025-09-03T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+""",
+        unsafe_allow_html=True,
+    )
+    st.stop()
 # ==============================
 # seo configuration
 # ==============================

@@ -395,23 +395,3 @@ def local_css(file_name: str):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-def site_robot():
-    # Handle robots.txt
-    if "robots" in st.experimental_get_query_params():
-        st.markdown("User-agent: *\nAllow: /\nSitemap: https://videotexteditor.streamlit.app/?sitemap",
-                    unsafe_allow_html=True)
-        st.stop()
-    
-    # Handle sitemap.xml
-    if "sitemap" in st.experimental_get_query_params():
-        st.markdown("<?xml version='1.0' encoding='UTF-8'?>\n"
-                    "<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>\n"
-                    "  <url>\n"
-                    "    <loc>https://videotexteditor.streamlit.app/</loc>\n"
-                    "    <lastmod>2025-09-03T00:00:00Z</lastmod>\n"
-                    "    <changefreq>daily</changefreq>\n"
-                    "    <priority>1.0</priority>\n"
-                    "  </url>\n"
-                    "</urlset>",
-                    unsafe_allow_html=True)
-        st.stop()
