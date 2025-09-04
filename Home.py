@@ -11,6 +11,7 @@ if not QApplication.instance():
 # ✅ Apply global styles
 settings_overlay.apply_styles()
 
+settings_overlay.site_robot()
 # ==============================
 # seo configuration
 # ==============================
