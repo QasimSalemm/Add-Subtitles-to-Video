@@ -11,21 +11,22 @@ if not QApplication.instance():
 # ✅ Apply global styles
 settings_overlay.apply_styles()
 # ✅ Works on new Streamlit
+import streamlit as st
+
 params = st.query_params
 
 # Robots.txt
 if "robots" in params:
-    st.write(
-        "User-agent: *\n"
-        "Allow: /\n"
-        "Sitemap: https://videotexteditor.streamlit.app/?sitemap"
+    st.html(
+        "<pre>User-agent: *\nAllow: /\n"
+        "Sitemap: https://videotexteditor.streamlit.app/?sitemap</pre>"
     )
     st.stop()
 
 # Sitemap.xml
 if "sitemap" in params:
-    st.write(
-        """<?xml version="1.0" encoding="UTF-8"?>
+    st.html(
+        """<pre><?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://videotexteditor.streamlit.app/</loc>
@@ -39,11 +40,34 @@ if "sitemap" in params:
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-</urlset>
-""",
-        unsafe_allow_html=True,
+  <url>
+    <loc>https://videotexteditor.streamlit.app/Contact</loc>
+    <lastmod>2025-09-03T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://videotexteditor.streamlit.app/Privacy_Policy</loc>
+    <lastmod>2025-09-03T00:00:00Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://videotexteditor.streamlit.app/Terms_Conditions</loc>
+    <lastmod>2025-09-03T00:00:00Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://videotexteditor.streamlit.app/How_To_Use</loc>
+    <lastmod>2025-09-03T00:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset></pre>"""
     )
     st.stop()
+
 # ==============================
 # seo configuration
 # ==============================
