@@ -1,66 +1,57 @@
 import streamlit as st
-import overlay_settings as settings_overlay
 
-# ✅ Apply global styles
-settings_overlay.apply_styles()
+def how_to_use():
+    st.set_page_config(
+        page_title="How to Use - Text Overlay Studio", 
+                       page_icon="images/theme.png")
 
-st.set_page_config(
-    page_title="How to Use - Add Text to Video Tool",
-    page_icon="images/theme.png"
-)
+    # Title
+    st.title("How to Use Text Overlay Studio")
 
-# -----------------------------
-# H1 Section
-# -----------------------------
-st.markdown("""
-<div class="section-card">
-    <h1>How to Use the Add Text to Video Tool</h1>
-    <p>Follow these simple steps to add custom text or subtitles to your videos manually or automatically.</p>
-</div>
-""", unsafe_allow_html=True)
+    # Intro
+    st.write(
+        "Follow this step-by-step guide to add text, captions, or subtitles to your videos using "
+        "Text Overlay Studio. Our tool is designed to be simple, fast, and effective."
+    )
 
-# -----------------------------
-# Step-by-step Instructions
-# -----------------------------
-st.markdown("""
-<div class="section-card">
-    <h2>Step 1: Upload Your Video</h2>
-    <p>Click on the upload button to select your video file (MP4, MOV, AVI, MPEG4). Maximum size: 1GB.</p>
-</div>
+    # Step 1
+    st.subheader("Step 1: Upload Your Video")
+    st.write(
+        "Click on the **Upload Video** option to import your video file. The application supports "
+        "popular formats like MP4 and MOV."
+    )
 
-<div class="section-card">
-    <h2>Step 2: Add Text Manually</h2>
-    <h3>Manual Tab</h3>
-    <ul>
-        <li>Enter the text you want to overlay.</li>
-        <li>Set start and end times for the overlay.</li>
-        <li>Choose font, size, color, background, and position.</li>
-        <li>Click 'Add Overlay' to save it to the list.</li>
-        <li>Repeat for additional overlays.</li>
-        <li>Click 'Generate Video' to create the final video with all overlays.</li>
-    </ul>
-</div>
+    # Step 2
+    st.subheader("Step 2: Add Text Overlays")
+    st.write(
+        "Use the input fields to type the text you want to display. Customize the font, color, size, "
+        "and position to match your style."
+    )
 
-<div class="section-card">
-    <h2>Step 3: Add Text Automatically via CSV/Subtitles</h2>
-    <h3>Upload Tab</h3>
-    <ul>
-        <li>Upload a CSV, XLSX, or subtitle file containing start time, end time, and text.</li>
-        <li>Click 'Add Overlays' to automatically import all entries.</li>
-        <li>Click 'Generate Video' to create the final video with all text overlays.</li>
-    </ul>
-</div>
+    # Step 3
+    st.subheader("Step 3: Import Subtitles (Optional)")
+    st.write(
+        "You can also upload CSV or XLSX files containing subtitles. Each entry should include "
+        "the text, start time, and end time."
+    )
 
-<div class="section-card">
-    <h2>Step 4: Customize Text Overlays</h2>
-    <p>Adjust font, size, color, background, and position for each overlay to match your style and preferences.</p>
-</div>
+    # Step 4
+    st.subheader("Step 4: Preview Your Video")
+    st.write(
+        "After adding your overlays, preview the video inside the app to ensure everything looks perfect."
+    )
 
-<div class="section-card">
-    <h2>Step 5: Download and Share</h2>
-    <p>Once your video is generated, download it and share it wherever you like!</p>
-</div>
-""", unsafe_allow_html=True)
+    # Step 5
+    st.subheader("Step 5: Export the Final Video")
+    st.write(
+        "Click on **Generate Video** to export your final video with overlays. The processed file "
+        "will be available to download in MP4 format."
+    )
 
-# Footer
-settings_overlay.footer()
+
+    # Footer
+    st.write("---")
+    st.success("**Tips:**\n💡 Use high-quality video for clear overlays.\n💡 Keep subtitles concise for readability.💡 \nChoose contrasting text colors for better visibility.\n💡 Align text consistently for a professional look.")
+
+if __name__ == "__main__":
+    how_to_use()

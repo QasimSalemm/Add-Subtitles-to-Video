@@ -1,15 +1,16 @@
+from datetime import datetime
+import os
 import sys
+import time
 import pandas as pd
 import streamlit as st
+import toml
 import utility_functions as uf
 from moviepy import VideoFileClip
 import overlay_settings as settings_overlay
 from PySide6.QtWidgets import QApplication
 if not QApplication.instance():
     app = QApplication(sys.argv)
-
-# ✅ Apply global styles
-settings_overlay.apply_styles()
 
 # ==============================
 # seo configuration
@@ -18,17 +19,66 @@ st.set_page_config(
     page_title="Add Text to Video Manually or Upload CSV/Subtitles File",
     page_icon="images/theme.png"
 )
-st.markdown(
-    """
-    <div class="section-card">
-        <h1>Easily Add Custom Text to Your Videos</h1>
-        <p>Upload a video and add custom text manually or via CSV/XLSX/subtitles file. Customize font, color, size, and position, then generate your final video with text overlays.</p>
-    </div>""",unsafe_allow_html=True
-)
+st.title("Easily Add Custom Text to Your Videos")
+st.write("Upload a video and add custom text manually or via CSV/XLSX/subtitles file. Customize font, color, size, and position, then generate your final video with text overlays.")
+st.divider()
 # ==============================
 # Apply Buttons Width
 # ==============================
 settings_overlay.local_css("styles/style.css")
+
+
+CONFIG_PATH = "./.streamlit/config.toml"
+# Two theme presets
+THEMES = {
+    "Light": {
+        "theme": {
+            "base": "light"
+        },
+    },
+            "Dark": {
+        "theme": {
+            "base": "dark",
+            "borderColor": "mediumSlateBlue"
+        }
+    }
+}
+# ----------------------------
+# Read current theme from config
+# ----------------------------
+def get_current_theme():
+    if os.path.exists(CONFIG_PATH):
+        try:
+            config = toml.load(CONFIG_PATH)
+            base = config.get("theme", {}).get("base", "Light")
+            # Match with our keys
+            if base.lower() == "dark":
+                return "Dark"
+            else:
+                return "Light"
+        except:
+            return "Light"
+    else:
+        return "Light"
+
+current_theme = get_current_theme()
+
+# Sidebar radio with default
+choice = st.sidebar.radio(
+    "Select Theme", 
+    list(THEMES.keys()), 
+    index=list(THEMES.keys()).index(current_theme)
+)
+
+# Apply button
+if st.sidebar.button("Apply Theme"):
+    os.makedirs(os.path.dirname(CONFIG_PATH), exist_ok=True)
+    with open(CONFIG_PATH, "w") as f:
+        toml.dump(THEMES[choice], f)
+    st.sidebar.success(f"{choice} theme applied!")  
+    time.sleep(0.5)
+    st.rerun() 
+
 
 # ==============================
 # footer Session State Initialization
@@ -224,7 +274,10 @@ if video_file:
     with clear_all:
         settings_overlay.clear_all(clip, "all_data_cleared_key", target="video")
 
-# -----------------------------
-# footer
-# -----------------------------
-settings_overlay.footer()
+# Footer
+st.write("---")
+# Copyright (centered)
+year = datetime.now().year
+_, col, _ = st.columns([4, 2.5, 4])  # empty, center, empty
+with col:
+    st.caption(f"© {year} All rights reserved.")
