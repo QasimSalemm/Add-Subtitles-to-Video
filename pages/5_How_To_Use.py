@@ -47,11 +47,14 @@ def how_to_use():
         "Click on **Generate Video** to export your final video with overlays. The processed file "
         "will be available to download in MP4 format."
     )
-
-
-    # Footer
+        # Footer
     st.write("---")
-    st.success("**Tips:**\n💡 Use high-quality video for clear overlays.\n💡 Keep subtitles concise for readability.💡 \nChoose contrasting text colors for better visibility.\n💡 Align text consistently for a professional look.")
+    st.success("""**Tips:**\n
+                    ✔ Use high-quality video for clear overlays.\n
+                    ✔ Keep subtitles concise for readability.\n
+                    ✔ Choose contrasting text colors for better visibility.\n
+                    ✔ Align text consistently for a professional look.
+                """)
 
 if __name__ == "__main__":
     how_to_use()
