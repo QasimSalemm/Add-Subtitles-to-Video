@@ -6,7 +6,8 @@ import pandas as pd
 import streamlit as st
 import toml
 import utility_functions as uf
-from moviepy import VideoFileClip
+from moviepy.editor import VideoFileClip
+#from moviepy import VideoFileClip
 import overlay_settings as settings_overlay
 from PySide6.QtWidgets import QApplication
 if not QApplication.instance():
