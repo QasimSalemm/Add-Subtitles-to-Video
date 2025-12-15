@@ -3,4 +3,4 @@ streamlit
 proglog
 numpy
 Pillow 
-moviepy
+moviepy==2.1.2
