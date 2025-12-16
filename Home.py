@@ -214,7 +214,18 @@ if video_file:
         # Upload Overlay File
         # ==============================
         st.header("Upload (CSV or Excel) Subtitles File")
-        overlay_file = st.file_uploader("Upload CSV/Excel", type=["csv", "xlsx"], key=st.session_state.overlays_key)
+        overlay_file = st.file_uploader(
+            "Upload CSV/Excel",
+            type=["csv", "xlsx"],
+            key=st.session_state.overlays_key,
+            help="Excel or CSV must contain: text, start, end columns"
+        )
+
+        st.page_link(
+            "pages/5_How_To_Use.py",
+            label="📘 Read More → How to Use"
+        )
+
         if overlay_file is not None:
             ext = ".csv" if overlay_file.name.endswith(".csv") else ".xlsx"
             st.session_state.overlays_temp = uf.save_temp_file(overlay_file, ext)

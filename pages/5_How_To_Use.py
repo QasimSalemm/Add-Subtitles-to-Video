@@ -32,8 +32,17 @@ def how_to_use():
     st.subheader("Step 3: Import Subtitles (Optional)")
     st.write(
         "You can also upload CSV or XLSX files containing subtitles. Each entry should include "
-        "the text, start time, and end time."
+        "the text, start time, and end time. Following are examples!"
     )
+    st.write(
+        "Example of **LEFT** hand side text."
+    )  
+    st.image("images/left_text_sample.PNG", caption="left text sample", use_container_width=True)
+    st.write(
+        "Example of **RIGHT** hand side text."
+    )    
+    st.image("images/right_text_sample.PNG", caption="right text sample", use_container_width=True)
+
 
     # Step 4
     st.subheader("Step 4: Preview Your Video")
